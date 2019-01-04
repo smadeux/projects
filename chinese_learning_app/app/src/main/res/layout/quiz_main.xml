@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Menu Drawer-->
+    <android.support.v4.widget.DrawerLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/drawer_layout"
+        android:fitsSystemWindows="true"
+        tools:context=".MainActivity"
+        tools:openDrawer="start">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:id="@+id/toolbar"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:elevation="4dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/nav_container"/>
+
+        </LinearLayout>
+
+        <android.support.design.widget.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:id="@+id/nav_view"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/menu_drawer"/>
+
+    </android.support.v4.widget.DrawerLayout>
+    <LinearLayout
+        tools:context=".QuizMain"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/linear_lay_quiz"
+        android:layout_marginTop="90dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="#20000000">
+            <ProgressBar
+                android:layout_height="10dp"
+                android:layout_width="match_parent"
+                android:id="@+id/progress"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:progressTint="@color/color2"
+                android:layout_marginTop="5dp"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"/>
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/noQuestion"
+                    android:text="Question No : "
+                    android:layout_alignParentLeft="true"
+                    android:textSize="12dp"
+                    android:textColor="#000"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/score"
+                    android:text="Score: "
+                    android:textSize="12dp"
+                    android:textColor="#000"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_height="200dp"
+                android:layout_width="match_parent"
+                android:background="@color/color5"
+                android:id="@+id/question"
+                android:text=" 1 + 2 = ?"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="center"
+                android:layout_margin="10dp"/>
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/answer"
+                android:layout_margin="10dp"
+                android:hint="Write your answer"/>
+            <Button android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="@color/colorAccent"
+                android:id="@+id/submit"
+                android:text="Submit"
+                android:layout_margin="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

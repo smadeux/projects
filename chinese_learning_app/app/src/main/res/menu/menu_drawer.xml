@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <!--Makes sure you can only click one menu item-->
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/menu_tutorial"
+            android:icon="@drawable/ic_tutorial_white_24dp"
+            android:title="@string/tutorial" />
+        <item android:id="@+id/menu_lessons"
+            android:icon="@drawable/ic_lesson_white_24dp"
+            android:title="@string/lessons" />
+        <item android:id="@+id/menu_quizzes"
+            android:icon="@drawable/quiz"
+            android:title="@string/quizzes" />
+        <item android:id="@+id/menu_note"
+            android:icon="@drawable/alarm"
+            android:title="@string/notification_settings" />
+        <item android:id="@+id/menu_logout"
+            android:icon="@drawable/ic_account_box_white_24dp"
+            android:title="@string/log_out" />
+    </group>
+
+
+
+</menu>
